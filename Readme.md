@@ -19,7 +19,7 @@ It's important because in some functions in matlab you'll have to convert your i
 ## Code general dependencies in your path to add 
 Download *export_fig.m* : [export_fig.m](https://github.com/altmany/export_fig)
 
-###  **Dependencies for Colormap part**
+###  **Dependencies for Colormap part if your input images are RGB**
 Convert *color2gray.m*: [color2gray.m](https://es.mathworks.com/matlabcentral/fileexchange/8214-gray-image-to-color-image-conversion )
 
 ![colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48941280-2e047680-ef1b-11e8-8e58-17d0e785f2e4.jpg)
