@@ -33,14 +33,23 @@ Add this function : [initfcm.m](https://stackoverflow.com/questions/21083197/how
 Important code observations: 
 **m_color.m --> Number of clusters are relevant. For example:**
  * cluster=9
+ 
 ![fuzzy_cluster9_colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48944691-141d6080-ef28-11e8-97fb-0b057054603a.jpg)
+
  * cluster=8
+ 
 ![fuzzy_cluster8_colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48944774-6494be00-ef28-11e8-92c5-8dd23392c44e.jpg)
+
  * cluster=7
+ 
 ![fuzzy_cluster7_colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48944957-f1d81280-ef28-11e8-9ad3-b829ce6e9534.jpg)
+
  * cluster=5
+ 
 ![fuzzy_cluster5_colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48945086-5dba7b00-ef29-11e8-8ffb-03155f00f799.jpg)
+
  * cluster=2
+ 
 ![fuzzy_cluster2_colomap_blur_20_rbg_-100_test_con-018](https://user-images.githubusercontent.com/35488726/48945195-bc7ff480-ef29-11e8-8e10-3174bd221b81.jpg)
 
 
