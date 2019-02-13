@@ -43,10 +43,6 @@ for k = 1 : numberOfFolders
         
         if numberOfImageFiles >= 1
             % Go through all those image files.
-            
-         
-                
-                
                 for f = 1 : numberOfImageFiles
                   fullFileName = fullfile(thisFolder, baseFileNames(f).name);
 
