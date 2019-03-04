@@ -1,5 +1,6 @@
-addpath('C:\Users\cober\Documents\MATLAB_2\export_fig-master');
-addpath('C:\Users\cober\Documents\MATLAB_2\object_array');
+addpath('../export_fig-master');
+addpath('../object_array/');
+addpath('../fuzzy/');
 %1.Como entrada recibimos imagenes en bruto que son 256x256x3 //RUTA ENTRADA
 %2. Aplicamos color2gray ==> 256x256 //ALMACENAR EN ARRAY DE IMAGENES
 %3.Aplicamos una funcion colomap num1 ==> imagen 256x256x3 //ALMACENAR EN ARRAY DE IMAGENES
@@ -8,8 +9,8 @@ addpath('C:\Users\cober\Documents\MATLAB_2\object_array');
 %6.Aplicamos FCM //GUARDAR EN RUTA SALIDA
 
 
-filename_input = 'C:\Users\cober\Desktop\salidas_investigacion_imagenes_glioma\conjunto_comprueba_si_rgb_solo_blur';%ruta imagenes entrada en bruto
-filename_output='C:\Users\cober\Desktop\salidas_investigacion_imagenes_glioma\salida_conjunto_comprueba_si_rgb';%ruta imagenes salida
+filename_input = '..\imags_E_S\';%ruta imagenes entrada en bruto
+filename_output='..\imags_E_S\fuzzy_2colormap_test_FCM';%ruta imagenes salida
 
 if ~isdir(filename_input)
   errorMessage = sprintf('Error: The following folder does not exist:\n%s', filename_input);
@@ -77,4 +78,5 @@ for k = 1:length(jpegFiles) %recorre todas las imagenes
   fullFileName_o = fullfile(filename_output, nombre_salida_2);
   fprintf(1, 'Now writting %s\n', nombre_salida_2);  
   export_fig(fullFileName_o);   
- end
+end
+end

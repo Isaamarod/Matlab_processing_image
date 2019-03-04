@@ -6,7 +6,9 @@
 % The code was written by Tao Lei in 2017.
 % If you have any problems, please contact me. 
 % Email address: leitao@sust.edu.cn
-
+addpath('../export_fig-master');
+addpath('../object_array/');
+addpath('../fuzzy/');
 clc
 close all     
 clear all   
