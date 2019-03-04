@@ -46,26 +46,26 @@ for k = 1 : numberOfFolders
                 for f = 1 : numberOfImageFiles
                   fullFileName = fullfile(thisFolder, baseFileNames(f).name);
 
-                   if strfind (fullFileName,'CON_resized')
+                   if strfind (fullFileName,'CON_TRAIN')
                        fid = fopen('train_con.txt','a'); 
+                       fullFileName = fullfile(thisFolder, baseFileNames(f).name);
                        basefileName=strcat(baseFileNames(f).name,' 1\n');
                        fprintf(fid,basefileName);
                        fprintf('image name  %s\n',basefileName);
                        fclose(fid);
                        fprintf('Processing image file %s\n', fullFileName);
-                   else            
-                       
-                       if strfind (fullFileName,'SIN_resized')
+                   elseif strfind (fullFileName,'SIN_TRAIN')                                              
+                           fullFileName = fullfile(thisFolder, baseFileNames(f).name);
                            fid_2 = fopen('train_sin.txt','a');  
                            basefileName=strcat(baseFileNames(f).name,' 0\n');
                            fprintf(fid_2,basefileName);
                            fprintf('image name  %s\n',basefileName);
                            fclose(fid_2);
                            fprintf('Processing image file %s\n', fullFileName);
-                       end
                    end
-                end
-       end 
+                 end
+        end 
+        
                 
 end
       fprintf('Folder %s has no txt image files in it.\n', thisFolder);

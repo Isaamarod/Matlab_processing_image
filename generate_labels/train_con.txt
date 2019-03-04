@@ -166,7 +166,6 @@
 000012-pac39a.jpg 1
 000012-pac4.jpg 1
 000012-pac41a.jpg 1
-000012-pac5.jpg 1
 000012-pac6.jpg 1
 000012-pac7.jpg 1
 000012-pac8.jpg 1

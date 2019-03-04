@@ -1,5 +1,6 @@
-addpath('C:\Users\cober\Documents\MATLAB_2\export_fig-master');
-addpath('C:\Users\cober\Documents\MATLAB_2\object_array');
+addpath('../export_fig-master');
+addpath('../object_array/');
+
 %1.Como entrada recibimos imagenes en bruto que son 256x256x3 //RUTA ENTRADA
 %2. Aplicamos color2gray ==> 256x256 //ALMACENAR EN ARRAY DE IMAGENES
 %3.Aplicamos una funcion colomap num1 ==> imagen 256x256x3 //ALMACENAR EN ARRAY DE IMAGENES

@@ -10,7 +10,6 @@
 000000-pac23.jpg 0
 000000-pac3.jpg 0
 000000-pac4.jpg 0
-000000-pac5.jpg 0
 000000-pac9.jpg 0
 000000.jpg 0
 000001-pac11.jpg 0
@@ -108,7 +107,6 @@
 000006-pac42b.jpg 0
 000006-pac5.jpg 0
 000006-pac7.jpg 0
-000006.jpg 0
 000007-33e.jpg 0
 000007-PAC31B.jpg 0
 000007-pac2.jpg 0
@@ -520,7 +518,6 @@
 000056-pac39b.jpg 0
 000058-pac17.jpg 0
 000059-pac17.jpg 0
-000060-pac17.jpg 0
 000060-pac18.jpg 0
 000060-pac39b.jpg 0
 000061-pac18.jpg 0

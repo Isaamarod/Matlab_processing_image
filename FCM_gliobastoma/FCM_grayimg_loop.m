@@ -1,12 +1,12 @@
-addpath('C:\Users\cober\Documents\MATLAB_2\export_fig-master');
-addpath('C:\Users\cober\Documents\MATLAB_2\object_array');
-FRFCM=addpath('C:\Users\cober\Documents\MATLAB_2\FRFCM.m');
+addpath('../export_fig-master/');
+addpath('../object_array/');
+addpath('../fuzzy/');
 %1.Como entrada recibimos imagenes en blanco y negro en bruto que son 256x256 normalizadas //RUTA ENTRADA
 %2.Aplicamos FCM para gray//GUARDAR EN RUTA SALIDA
 
 
-filename_input = 'C:\Users\cober\Desktop\FASE_3_DL\test';%ruta imagenes entrada en bruto
-filename_output='C:\Users\cober\Desktop\FASE_4_DL\test';%ruta imagenes salida
+filename_input = 'C:\Users\cober\Desktop\pruebesita\';%ruta imagenes entrada en bruto
+filename_output='C:\Users\cober\Desktop\';%ruta imagenes salida
 
 if ~isdir(filename_input)
   errorMessage = sprintf('Error: The following folder does not exist:\n%s', filename_input);
