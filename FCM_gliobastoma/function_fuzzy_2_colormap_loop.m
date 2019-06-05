@@ -53,10 +53,10 @@ for k = 1:length(jpegFiles) %recorre todas las imagenes
     im=imshow(A,'Colormap',jet(255));
     %saveas(salida_array,fullFileName_o); %%descartado porque me cambia el
     %tamano de la img al guardar
-    nombre_salida=strcat('colormap2_',baseFileName);
-    fullFileName_o_color_map = fullfile(filename_output, nombre_salida);
-    export_fig(fullFileName_o_color_map);
-    f_ori=imread(fullFileName_o_color_map);
+%     nombre_salida=strcat('colormap2_',baseFileName);
+%     fullFileName_o_color_map = fullfile(filename_output, nombre_salida);
+%     export_fig(fullFileName_o_color_map);
+    f_ori=imread(im);
     cluster=num_clusters; % the number of clustering centers
     se=3; % the parameter of structuing element used for morphological reconstruction
     w_size=5; % the size of fitlering window

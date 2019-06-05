@@ -1,8 +1,8 @@
-srcFiles = dir('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\test_resized\*.png');  % the folder in which ur images exists
+srcFiles = dir('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV\CV_1\train\3\*.png');  % the folder in which ur images exists
 for i = 1 : length(srcFiles)
-filename = strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\test_resized\',srcFiles(i).name);
+filename = strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV\CV_1\train\3\',srcFiles(i).name);
 im = imread(filename);
 k=imresize(im,[256,256]);
-newfilename=strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\test_resized_256\',srcFiles(i).name);
+newfilename=strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV_256\CV_1\train\3\',srcFiles(i).name);
 imwrite(k,newfilename,'png');
 end  
