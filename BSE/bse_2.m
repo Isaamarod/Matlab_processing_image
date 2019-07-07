@@ -88,7 +88,7 @@ ylabel('Pixel Counts', 'FontSize', fontSize);
 
 %===========================================================================================================
 % Threshold the image to make a binary image.
-thresholdValue = 100;
+thresholdValue = 150;
 binaryImage = grayImage > thresholdValue;
 % Display the image.
 subplot(2, 3, 4);

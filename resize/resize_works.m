@@ -1,8 +1,8 @@
-srcFiles = dir('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV\CV_1\train\3\*.png');  % the folder in which ur images exists
+srcFiles = dir('F:\keras_split_CV_256_balanced_all_filters\keras_split_CV_64_balanced_colormap\CV1\train\2\*.png');  % the folder in which ur images exists
 for i = 1 : length(srcFiles)
-filename = strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV\CV_1\train\3\',srcFiles(i).name);
+filename = strcat('F:\keras_split_CV_256_balanced_all_filters\keras_split_CV_64_balanced_colormap\CV1\train\2\',srcFiles(i).name);
 im = imread(filename);
-k=imresize(im,[256,256]);
-newfilename=strcat('C:\Users\cober\Desktop\FASE_6\FASE_6_DL\keras_split_CV_256\CV_1\train\3\',srcFiles(i).name);
+k=imresize(im,[64,64]);
+newfilename=strcat('F:\keras_split_CV_256_balanced_all_filters\keras_split_CV_64_balanced_colormap\CV1\train\2\',srcFiles(i).name);
 imwrite(k,newfilename,'png');
 end  

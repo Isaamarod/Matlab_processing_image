@@ -9,8 +9,9 @@ addpath('../fuzzy/');
 %6.Aplicamos FCM //GUARDAR EN RUTA SALIDA
 
 
-filename_input = '..\imags_E_S\';%ruta imagenes entrada en bruto
-filename_output='..\imags_E_S\fuzzy_2colormap_test_FCM';%ruta imagenes salida
+filename_input = 'F:\keras_split_CV_256_balanced\keras_split_CV_256_balanced\CV_2\test\1';%ruta imagenes entrada en bruto
+filename_output_c = 'F:\keras_split_CV_256_balanced\keras_split_CV_256_balanced_colormap\CV2\test\1';%ruta imagenes entrada en bruto
+filename_output_fc='F:\keras_split_CV_256_balanced\keras_split_CV_256_balanced_fuzzy_colormap\CV2\test\1';%ruta imagenes salida
 
 if ~isdir(filename_input)
   errorMessage = sprintf('Error: The following folder does not exist:\n%s', filename_input);
@@ -18,18 +19,25 @@ if ~isdir(filename_input)
   return;
 end
 
-if ~isdir(filename_output)
+if ~isdir(filename_output_c)
+  errorMessage = sprintf('Error: The following folder does not exist:\n%s', filename_output);
+  uiwait(warndlg(errorMessage));
+  return;
+end
+
+if ~isdir(filename_output_fc)
   errorMessage = sprintf('Error: The following folder does not exist:\n%s', filename_output);
   uiwait(warndlg(errorMessage));
   return;
 end
 
 
+
 %patron imagenes entrada 1 
-filePattern = fullfile(filename_input, '*.jpg');
+filePattern = fullfile(filename_input, '*.png');
 jpegFiles = dir(filePattern); %todas las imagenes jpg
 %patron imagenes entrada 2
-filePattern_2 = fullfile(filename_output, '*.jpg');
+filePattern_2 = fullfile(filename_output_c, '*.png');
 jpegFiles_2 = dir(filePattern_2); %todas las imagenes jpg
 
 
@@ -55,11 +63,11 @@ for k = 1:length(jpegFiles) %recorre todas las imagenes
   im=imshow(A,'Colormap',jet(255));     
   %saveas(salida_array,fullFileName_o); %%descartado porque me cambia el
   %tamano de la img al guardar
-  nombre_salida=strcat('colormap2_',baseFileName);
-  fullFileName_o_color_map = fullfile(filename_output, nombre_salida);  
+  nombre_salida=strcat('colormap_',baseFileName);
+  fullFileName_o_color_map = fullfile(filename_output_c, nombre_salida);  
   export_fig(fullFileName_o_color_map);
   f_ori=imread(fullFileName_o_color_map);
-  cluster=5; % the number of clustering centers
+  cluster=10; % the number of clustering centers
   se=3; % the parameter of structuing element used for morphological reconstruction
   w_size=5; % the size of fitlering window
 %% test a color image
@@ -75,8 +83,7 @@ for k = 1:length(jpegFiles) %recorre todas las imagenes
   colormap default
   im_seg=imshow(f_seg);  
   nombre_salida_2=strcat('fuzzy_',nombre_salida);  
-  fullFileName_o = fullfile(filename_output, nombre_salida_2);
+  fullFileName_o = fullfile(filename_output_fc, nombre_salida_2);
   fprintf(1, 'Now writting %s\n', nombre_salida_2);  
   export_fig(fullFileName_o);   
-end
 end
